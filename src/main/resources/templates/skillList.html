@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Skills List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/style.css}"/>
+</head>
+<body>
+<h1>Skill List</h1>
+<a href="addSkill">Add Skill</a>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>experience</th>
+        </tr>
+        <tr th:each ="skill : ${skills}">
+            <td th:utext="${skill.name}">...</td>
+            <td th:utext="${skill.experience}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
